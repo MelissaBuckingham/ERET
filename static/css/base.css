@@ -28,13 +28,18 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: rgb(199, 170, 92);
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
     background: black;
+    color: white;
+}
+
+.btn-gold {
+    background: rgb(114, 77, 33);
     color: white;
 }
 
@@ -50,6 +55,10 @@ body {
 
 .text-black {
     color: #000 !important;
+}
+
+.text-gold {
+    color: rgb(114, 77, 33);
 }
 
 .border-black {
