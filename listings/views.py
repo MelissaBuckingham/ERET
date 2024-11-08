@@ -16,4 +16,4 @@ def listing_detail(request, listing_id):
     context = {
         'listing': listing,
     }
-    return render(request, 'listing/listing_detail.html', context)
+    return render(request, 'listings/listing_detail.html', context)
