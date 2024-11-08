@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Product
 
 # Create your views here.
@@ -9,3 +9,11 @@ def all_listings(request):
         'listings': listings,
     }
     return render(request, 'listings/listings.html', context)
+
+def listing_detail(request, listing_id):
+    """ A view to show individual listing details """
+    listing = get_object_or_404(Product, pk=listing_id)
+    context = {
+        'listing': listing,
+    }
+    return render(request, 'listing/listing_detail.html', context)
