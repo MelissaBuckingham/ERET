@@ -21,6 +21,7 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    color: rgb(114, 77, 33);
 }
 
 .main-logo-link {
@@ -71,8 +72,12 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: rgba(236, 229, 188, 0.911);
 	z-index: -1;
+}
+
+.product-details-container {
+    background: rgba(238, 232, 200, 0.911);
 }
 
 /* -------------------------------- Media Queries */
