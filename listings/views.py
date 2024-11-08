@@ -10,9 +10,9 @@ def all_listings(request):
     }
     return render(request, 'listings/listings.html', context)
 
-def listing_detail(request, listing_id):
+def listing_detail(request, product_id):
     """ A view to show individual listing details """
-    listing = get_object_or_404(Product, pk=listing_id)
+    listing = get_object_or_404(Product, pk=product_id)
     context = {
         'listing': listing,
     }
