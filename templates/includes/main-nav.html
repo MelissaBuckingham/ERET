@@ -18,10 +18,34 @@
                 Arona
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Arona Town</a>
-                <a href="" class="dropdown-item">Buzanada</a>
-                <a href="" class="dropdown-item">Los Cristianos</a>
-                <a href="" class="dropdown-item">All Arona</a>
+                <a class="dropdown-item nav-link text-gold mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Arona Town &raquo</a>
+                <div class="dropdown-menu dropdown-submenu border-0">
+                    <a href="{% url 'listings' %}?category=arona_town_apartments" class="dropdown-item">Apartments</a>
+                    <a href="{% url 'listings' %}?category=arona_town_houses" class="dropdown-item">houses</a>
+                    <a href="{% url 'listings' %}?category=arona_town_villas" class="dropdown-item">villas</a>
+                    <a href="{% url 'listings' %}?category=arona_town_apartments,arona_town_houses,arona_town_villas" class="dropdown-item">All Properties</a>
+                </div>
+                <a class="dropdown-item nav-link text-gold mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buzanada &raquo</a>
+                <div class="dropdown-menu dropdown-submenu border-0">
+                    <a href="{% url 'listings' %}?category=buzanada_apartments" class="dropdown-item">Apartments</a>
+                    <a href="{% url 'listings' %}?category=buzanada_houses" class="dropdown-item">houses</a>
+                    <a href="{% url 'listings' %}?category=buzanada_villas" class="dropdown-item">villas</a>
+                    <a href="{% url 'listings' %}?category=buzanada_apartments,buzanada_houses,buzanada_villas" class="dropdown-item">All Properties</a>
+                </div>
+                <a class="dropdown-item nav-link text-gold mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Los Cristianos &raquo</a>
+                <div class="dropdown-menu dropdown-submenu border-0">
+                    <a href="{% url 'listings' %}?category=los_cristianos_apartments" class="dropdown-item">Apartments</a>
+                    <a href="{% url 'listings' %}?category=los_cristianos_houses" class="dropdown-item">houses</a>
+                    <a href="{% url 'listings' %}?category=los_cristianos_villas" class="dropdown-item">villas</a>
+                    <a href="{% url 'listings' %}?category=los_cristianos_apartments,los_cristianos_houses,los_cristianos_villas" class="dropdown-item">All Properties</a>
+                </div>
+                <a class="dropdown-item nav-link text-gold mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Arona &raquo</a>
+                <div class="dropdown-menu dropdown-submenu border-0">
+                    <a href="{% url 'listings' %}?category=arona_town_apartments,buzanada_apartments,los_cristianos_apartments" class="dropdown-item">Apartments</a>
+                    <a href="{% url 'listings' %}?category=arona_town_houses,buzanada_houses,los_cristianos_houses" class="dropdown-item">houses</a>
+                    <a href="{% url 'listings' %}?category=arona_town_villas,buzanada_villas,los_cristianos_villas" class="dropdown-item">villas</a>
+                    <a href="{% url 'listings' %}?category=arona_town_apartments,arona_town_houses,arona_town_villas,buzanada_apartments,buzanada_houses,buzanada_villas,los_cristianos_apartments,los_cristianos_houses,los_cristianos_villas" class="dropdown-item">All Properties</a>
+                </div>
             </div>
         </li>
 
@@ -30,9 +54,27 @@
                 Adeje
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Adeje Town</a>
-                <a href="" class="dropdown-item">Costa Adeje</a>
-                <a href="" class="dropdown-item">All Adeje</a>
+                <a class="dropdown-item nav-link text-gold mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Adeje Town &raquo</a>
+                <div class="dropdown-menu dropdown-submenu border-0">
+                    <a href="{% url 'listings' %}?category=adeje_town_apartments" class="dropdown-item">Apartments</a>
+                    <a href="{% url 'listings' %}?category=adeje_town_houses" class="dropdown-item">houses</a>
+                    <a href="{% url 'listings' %}?category=adeje_town_villas" class="dropdown-item">villas</a>
+                    <a href="{% url 'listings' %}?category=adeje_town_apartments,adeje_town_houses,adeje_town_villas" class="dropdown-item">All Properties</a>
+                </div>
+                <a class="dropdown-item nav-link text-gold mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Costa Adeje &raquo</a>
+                <div class="dropdown-menu dropdown-submenu border-0">
+                    <a href="{% url 'listings' %}?category=costa_adeje_apartments" class="dropdown-item">Apartments</a>
+                    <a href="{% url 'listings' %}?category=costa_adeje_houses" class="dropdown-item">houses</a>
+                    <a href="{% url 'listings' %}?category=costa_adeje_villas" class="dropdown-item">villas</a>
+                    <a href="{% url 'listings' %}?category=costa_adeje_apartments,costa_adeje_houses,costa_adeje_villas" class="dropdown-item">All Properties</a>
+                </div>
+                <a class="dropdown-item nav-link text-gold mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Adeje &raquo</a>
+                <div class="dropdown-menu dropdown-submenu border-0">
+                    <a href="{% url 'listings' %}?category=adeje_town_apartments,costa_adeje_apartments" class="dropdown-item">Apartments</a>
+                    <a href="{% url 'listings' %}?category=adeje_town_houses,costa_adeje_houses" class="dropdown-item">houses</a>
+                    <a href="{% url 'listings' %}?category=adeje_town_villas,costa_adeje_villas" class="dropdown-item">villas</a>
+                    <a href="{% url 'listings' %}?category=adeje_town_apartments,adeje_town_houses,adeje_town_villas,costa_adeje_apartments,costa_adeje_houses,costa_adeje_villas" class="dropdown-item">All Properties</a>
+                </div>
             </div>
         </li>
 
@@ -41,10 +83,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'listings' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'listings' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'listings' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'listings' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
