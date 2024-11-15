@@ -6,9 +6,9 @@
                 All Properties
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-listings-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Area</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'listings' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'listings' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'listings' %}?sort=category&direction=asc" class="dropdown-item ">By Area</a>
                 <a href="{% url 'listings' %}" class="dropdown-item">All Listings</a>
             </div>
         </li>

@@ -9,12 +9,26 @@ def all_listings(request):
     listings = Product.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
-            listings = listings.filter(category__name__in=categories)
-            categories = Category.objects.filter(name__in=categories)
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                listings = listings.annotate(lower_name=Lower('name'))
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            listings = listings.order_by(sortkey)
+            
+        if 'listing' in request.GET:
+            listings = request.GET['category'].split(',')
+            listings = listings.filter(category__name__in=listings)
+            listings = Category.objects.filter(name__in=listings)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -25,10 +39,13 @@ def all_listings(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             listings = listings.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'listings': listings,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting,
     }
     return render(request, 'listings/listings.html', context)
 
