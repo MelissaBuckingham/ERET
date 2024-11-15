@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
+from .forms import ProductForm
 
 # Create your views here.
 def all_listings(request):
@@ -69,3 +70,12 @@ def listing_detail(request, product_id):
         'listing': listing,
     }
     return render(request, 'listings/listing_detail.html', context)
+
+def add_listing(request):
+    """ Add a listing to the site """
+    form = ProductForm()
+    template = 'listings/add_listing.html'
+    context = {
+        'form': form,
+    }
+    return render(request, template, context)
