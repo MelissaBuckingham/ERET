@@ -80,6 +80,12 @@ body {
     background: rgba(238, 232, 200, 0.911);
 }
 
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

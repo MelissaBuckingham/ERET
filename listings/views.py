@@ -19,6 +19,8 @@ def all_listings(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 listings = listings.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -29,6 +31,11 @@ def all_listings(request):
             listings = request.GET['category'].split(',')
             listings = listings.filter(category__name__in=listings)
             listings = Category.objects.filter(name__in=listings)
+
+        if 'product' in request.GET:
+            products = request.GET['category'].split(',')
+            products = products.filter(category__name__in=products)
+            products = Category.objects.filter(name__in=products)
 
         if 'q' in request.GET:
             query = request.GET['q']

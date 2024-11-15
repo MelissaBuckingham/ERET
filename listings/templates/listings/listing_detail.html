@@ -21,7 +21,7 @@
                         </a>
                         {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ listing.name }}">
                         </a>
                     {% endif %}
                 </div>
@@ -30,6 +30,13 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ listing.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">€{{ listing.price }}</p>
+                    {% if listing.category %}
+                    <p class="small mt-1 mb-0">
+                        <a class="text-muted" href="{% url 'listings' %}?category={{ listing.category.name }}">
+                            <i class="fas fa-tag mr-1"></i>{{ listing.category.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
                     {% if listing.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ listing.rating }} / 5</small>
                     {% else %}
