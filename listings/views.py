@@ -73,7 +73,17 @@ def listing_detail(request, product_id):
 
 def add_listing(request):
     """ Add a listing to the site """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added property!')
+            return redirect(reverse('add_listing'))
+        else:
+            messages.error(request, 'Failed to add property. Please ensure the form is valid.')
+    else:
+        form = ProductForm()
+        
     template = 'listings/add_listing.html'
     context = {
         'form': form,
