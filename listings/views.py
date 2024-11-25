@@ -89,3 +89,25 @@ def add_listing(request):
         'form': form,
     }
     return render(request, template, context)
+
+
+def edit_listing(request, product_id):
+    """ Edit a listing on the website """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated property!')
+            return redirect(reverse('listing_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update property. Please ensure the form is valid.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+    template = 'listings/edit_listing.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+    return render(request, template, context)
