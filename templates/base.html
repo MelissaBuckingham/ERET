@@ -37,7 +37,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-      <div class="row">
+      <div class="row bg-gold">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
               <a href="{% url 'home' %}" class="nav-link main-logo-link">
                 <div class="row">
@@ -81,7 +81,6 @@
                               {% if request.user.is_superuser %}
                                   <a href="/listings/add/" class="dropdown-item">Property Management</a>
                               {% endif %}
-                              <a href="" class="dropdown-item">My Profile</a>
                               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                           {% else %}
                               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -102,8 +101,8 @@
         </nav>
       </div>
       <div id="delivery-banner" class="row text-center">
-        <div class="col text-white" style="background-color: rgb(233, 209, 135, 0.8);">
-            <h4 class="logo-font my-1">The best prices guaranteed!</h4>                
+        <div class="col text-white" style="background-color: rgb(233, 209, 135, 0.1);">
+            <h4 class="logo-font my-1"></h4>                
         </div>            
       </div>
     </header>

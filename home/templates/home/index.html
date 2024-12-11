@@ -14,26 +14,14 @@
     <div class="container h-100">
         <div class="row h-100">
             <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-gold d-none d-md-block" style="background-color: rgb(233, 209, 135, 0.3);">
-                    The new propery listings are here
-                </h1>
+                <video width="1100" height="500" autoplay muted controls>
+                    <source src="/media/Welcome-vid.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                  </video>
                 <div class="d-block d-lg-none">
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
                 </div>
-                <div class="my-5">
+                <div class="my-20">
                     <h4>
                         <a href="{% url 'listings' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">See Properties</a>
                     </h4>
@@ -41,4 +29,28 @@
             </div>
         </div>
     </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div style="color: aliceblue; text-align: center; font-size: x-large;">
+            <a href="https://www.facebook.com/profile.php?id=61563986484841" class="me-4 text-reset">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <!--<a href="" class="me-4 text-reset">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-google"></i>
+            </a>-->
+            <a href="https://www.instagram.com/eliterealestatetenerife/" class="me-4 text-reset">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <!--<a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-github"></i>
+            </a>-->
+          </div>
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Elite Real Estate Tererife 2024</p></div>
+    </footer>
 {% endblock %}

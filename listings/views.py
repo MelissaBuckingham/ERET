@@ -78,7 +78,7 @@ def add_listing(request):
         if form.is_valid():
             product = form.save()
             messages.success(request, 'Successfully added property!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('listing_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add property. Please ensure the form is valid.')
     else:

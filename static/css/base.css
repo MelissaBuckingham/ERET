@@ -44,6 +44,10 @@ body {
     color: white;
 }
 
+.bg-gold {
+    background: rgb(235, 215, 161);
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
