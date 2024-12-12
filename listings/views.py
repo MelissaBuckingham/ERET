@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
-from .forms import ProductForm
+from .models import Product, Category, Image
+from .forms import ProductForm, UploadImageForm
 
 # Create your views here.
 def all_listings(request):
@@ -119,3 +119,15 @@ def delete_listing(request, product_id):
     product.delete()
     messages.success(request, 'Property deleted!')
     return redirect(reverse('listings'))
+
+def gallery_with_upload(request):
+    if request.method == 'POST':
+        form = UploadImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            for image in request.FILES.getlist('images'):
+                Image.objects.create(image=image)
+    else:
+        form = UploadImageForm()
+
+    gallery = Image.objects.all()
+    return render(request, 'gallery_with_upload.html', {'form': form, 'gallery': gallery})

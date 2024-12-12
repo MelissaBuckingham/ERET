@@ -15,15 +15,13 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
-                    {% if listing.image %}
-                        <a href="{{ listing.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ listing.image.url }}" alt="{{ listing.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ listing.name }}">
-                        </a>
-                    {% endif %}
+                    {% for image in gallery %}
+                        <div class="gallery-item">
+                            <img src="{{ image.image.url }}" alt="Gallery Image">
+                        </div>
+                    {% empty %}
+                        <p>No images in the gallery yet.</p>
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
