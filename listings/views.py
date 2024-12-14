@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, Image
-from .forms import ProductForm, UploadImageForm
+from .models import Product, Category
+from .forms import ProductForm
 
 # Create your views here.
 def all_listings(request):
@@ -130,4 +130,4 @@ def gallery_with_upload(request):
         form = UploadImageForm()
 
     gallery = Image.objects.all()
-    return render(request, 'gallery_with_upload.html', {'form': form, 'gallery': gallery})
+    return render(request, 'listings/gallery_with_upload.html', {'form': form, 'gallery': gallery})

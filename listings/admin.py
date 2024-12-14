@@ -1,13 +1,7 @@
 from django.contrib import admin
-from .models import Product, Category, Image
+from .models import Product, Category
 
 # Register your models here.
-
-class ImageAdmin(admin.StackedInline):
-    model = Image
-
-class ImageAdmin(admin.ModelAdmin):
-    pass
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
@@ -16,13 +10,21 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'price',
         'rating',
-        'imagename',
         'image',
+        'image2',
+        'image3',
+        'image4',
+        'image5',
+        'image6',
+        'image7',
+        'image8',
+        'image9',
+        'image10',
+        'image11',
+        'image12',
     )
 
     ordering = ('sku',)
-
-    inlines = [ImageAdmin]
 
     class Meta:
        model = Product
@@ -40,4 +42,3 @@ admin.site.register(Category)
 
 
 
-admin.site.register(Image)
