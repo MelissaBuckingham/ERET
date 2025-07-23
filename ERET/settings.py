@@ -27,9 +27,9 @@ SECRET_KEY = 'django-insecure-j^z2@o=cyx=ppaaorcsjiq@rkc*%nq)!uq%jy62v-kns_4ind5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["8000-melissabuckingha-eret-9b693nksnqu.ws-eu117.gitpod.io"]
+ALLOWED_HOSTS = ["home-5018258935.app-ionos.space"]
 
-CSRF_TRUSTED_ORIGINS=["https://8000-melissabuckingha-eret-9b693nksnqu.ws-eu117.gitpod.io"]
+CSRF_TRUSTED_ORIGINS=["https://home-5018258935.app-ionos.space"]
 
 
 # Application definition
