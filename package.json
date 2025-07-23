@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "django": "^99.99.99",
+    "django-express": "^1.0.0"
+  }
+}

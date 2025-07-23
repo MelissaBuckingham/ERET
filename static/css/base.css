@@ -48,6 +48,10 @@ body {
     background: rgb(235, 215, 161);
 }
 
+.bg-black {
+    background: rgb(0, 0, 0);
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
