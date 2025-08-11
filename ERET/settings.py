@@ -27,9 +27,9 @@ SECRET_KEY = 'django-insecure-j^z2@o=cyx=ppaaorcsjiq@rkc*%nq)!uq%jy62v-kns_4ind5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://home-5018284122.app-ionos.space/", "8000-melissabuckingha-eret-4onfvlbwk6n.ws-eu120.gitpod.io"]
+ALLOWED_HOSTS = [".eliterealestatetenerife.com", "https://home-5018284122.app-ionos.space/", "8000-melissabuckingha-eret-gkkqyj22lkw.ws-eu121.gitpod.io"]
 
-CSRF_TRUSTED_ORIGINS=["https://home-5018284122.app-ionos.space/", "https://8000-melissabuckingha-eret-4onfvlbwk6n.ws-eu120.gitpod.io"]
+CSRF_TRUSTED_ORIGINS=["https://eliterealestatetenerife.com", "https://home-5018284122.app-ionos.space/", "https://8000-melissabuckingha-eret-gkkqyj22lkw.ws-eu120.gitpod.io"]
 
 
 # Application definition
