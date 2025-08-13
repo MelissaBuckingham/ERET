@@ -80,12 +80,12 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: rgba(236, 229, 188, 0.911);
+	background: rgba(0, 0, 0, 0.911);
 	z-index: -1;
 }
 
 .product-details-container {
-    background: rgba(238, 232, 200, 0.911);
+    background: rgba(0, 0, 0, 0.911);
 }
 
 a.category-badge > span.badge:hover {
@@ -144,10 +144,10 @@ html{
 
 body{
     background-color: transparent;
-    background: url('https://i.imgur.com/ApQKtQZ.jpeg') fixed no-repeat;
+    background: url('/media/background.jpeg') fixed no-repeat;
     background-size: cover;
     max-height: 300rem;
-    border: 15px solid transparent !important;
+    border: 0px solid transparent !important;
     -o-border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
        border-image: -webkit-gradient(linear,left top, right bottom,from(rgba(255, 255, 255, 0.75)),color-stop(0%, rgba(245, 245, 245, 0.75)),color-stop(16.6%, rgba(245, 245, 245, 0.75)),color-stop(37.8%, rgb(245, 245, 245)),color-stop(48.8%, rgb(245, 245, 245)),color-stop(53.1%, rgb(254, 254, 254)),color-stop(79.4%, rgba(245, 245, 245, 0.75)),color-stop(84.3%, rgba(245, 245, 245, 0.75))) !important;
        border-image: linear-gradient(to bottom right,rgba(255, 255, 255, 0.75) 0%,rgba(245, 245, 245, 0.75) 0%,rgba(245, 245, 245, 0.75) 16.6%,rgb(245, 245, 245) 37.8%,rgb(245, 245, 245) 48.8%,rgb(254, 254, 254) 53.1%,rgba(245, 245, 245, 0.75) 79.4%,rgba(245, 245, 245, 0.75) 84.3%) !important;
@@ -270,8 +270,8 @@ Cards
 
 .news-row {
 	margin: 0;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .news-block{
