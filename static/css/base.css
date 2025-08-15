@@ -300,7 +300,7 @@ Cards
   max-height: 350px;
   max-width: 340px;
 }
-
+/*
 .card{
     margin: 0;
     width: 340px;
@@ -321,7 +321,7 @@ Cards
     -webkit-animation-duration: 1.5s;
             animation-duration: 1.5s;
 }
-
+*/
 @-webkit-keyframes blockAppear {
   0% {
     opacity: 0;
@@ -388,11 +388,11 @@ Cards
     width: 400px;
     max-width: 400px;
     border: none !important;
-    border-right: 60px solid transparent !important;
-    border-bottom: 20px solid transparent !important;
-    margin-right: -20px;
-	  -webkit-transform:  translate(-30px, -50px);
-	          transform:  translate(-30px, -50px);
+    border-right: 15px solid transparent !important;
+    border-bottom: 5px solid transparent !important;
+    margin-right: -5px;
+	  -webkit-transform:  translate(-10px, -20px);
+	          transform:  translate(-10px, -20px);
 }
 
 .card:before{
@@ -540,7 +540,110 @@ Pixel Grid
           box-shadow: 2px 2px 3px #888;
   opacity: 1 !important;
 }
-/*------------------*/
+/*------------------ Team Cards*/
+
+.fa {
+  padding: 10px;
+  margin : 10px;
+  width:38px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+
+  
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-whatsapp {
+  background: #005e17;
+  color: white;
+  size: 200px;
+  }
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+h1{
+  font-family: 'Yrsa', serif;
+  font-size: 50px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 260px;
+  height: 400px;
+  
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+
+  width: 260px;
+  height: 300px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+  width: 260px;
+  height: 300px;
+  background-color: #f2f2f2;
+}
+
+.card-title{
+  color: #007b5e;
+  padding: 20px;
+}
+
+header{
+  background-color: #4269605e;
+}
+
+.person{
+  color: #007b5e;
+  font-family: 'Yrsa', serif;
+  font-size: 30px;
+  padding: 15px;
+}
+
+ 
+.card-body{
+  background-color: #f2f2f2;
+}
 
 
 /* -------------------------------- Media Queries */
