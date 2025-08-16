@@ -15,37 +15,31 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Arona
+                South
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'listings' %}?category=arona_town_apartments,arona_town_houses,arona_town_villas" class="dropdown-item">Arona Town</a>
-                <a href="{% url 'listings' %}?category=buzanada_apartments,buzanada_houses,buzanada_villas" class="dropdown-item">Buzanada</a>
                 <a href="{% url 'listings' %}?category=los_cristianos_apartments,los_cristianos_houses,los_cristianos_villas" class="dropdown-item">Los Cristianos</a>
-                <a href="{% url 'listings' %}?category=arona_town_apartments,arona_town_houses,arona_town_villas,buzanada_apartments,buzanada_houses,buzanada_villas,los_cristianos_apartments,los_cristianos_houses,los_cristianos_villas" class="dropdown-item">ALL Arona Municipal</a>
+                <a href="{% url 'listings' %}?category=las_americas_apartments,las_americas_houses,las_americas_villas" class="dropdown-item">Las Americas</a>
+                <a href="{% url 'listings' %}?category=adeje_apartments,adeje_houses,adeje_villas" class="dropdown-item">Adeje</a>
+                <a href="{% url 'listings' %}?category=costa_del_silencio_apartments,costa_del_silencio_houses,costa_del_silencio_villas" class="dropdown-item">Costa del Silencio</a>
+                <a href="{% url 'listings' %}?category=grenadilla_de_abona_apartments,grenadilla_de_abona_houses,grenadilla_de_abona_villas" class="dropdown-item">Grenadilla de Abona</a>
+                <a href="{% url 'listings' %}?category=guia_de_isora_apartments,guia_de_isora_houses,guia_de_isora_villas" class="dropdown-item">Guia de Isora</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Adeje
+                North
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="{% url 'listings' %}?category=adeje_town_apartments,adeje_town_houses,adeje_town_villas" class="dropdown-item">Adeje Town</a>
-                <a href="{% url 'listings' %}?category=costa_adeje_apartments,costa_adeje_houses,costa_adeje_villas" class="dropdown-item">Costa Adeje</a>
-                <a href="{% url 'listings' %}?category=adeje_town_apartments,adeje_town_houses,adeje_town_villas,costa_adeje_apartments,costa_adeje_houses,costa_adeje_villas" class="dropdown-item">ALL Adeje Municipal</a>
+                <a href="{% url 'listings' %}?category=norte_apartments,norte_houses,norte_villas" class="dropdown-item">Norte</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-white" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
+            <a class="logo-font font-weight-bold nav-link text-white" href="{% url 'about' %}" id="specials-link" aria-haspopup="true" aria-expanded="false">
+                About Us
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'listings' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'listings' %}?category=deals" class="dropdown-item">Deals</a>
-                <a href="{% url 'listings' %}?category=clearance" class="dropdown-item">Clearance</a>
-                <a href="{% url 'listings' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
-            </div>
         </li>
     </ul>
 </div>
