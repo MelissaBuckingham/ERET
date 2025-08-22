@@ -455,6 +455,14 @@ Cards
     transition: height 0.8s ease;
 }
 
+.card-img-top2{
+    width: 350px;
+    height: 250px;
+    background-color: black;
+    -webkit-transition: height 0.8s ease;
+    transition: height 0.8s ease;
+}
+
 @media (max-width: 1120px){
     .bar-cont{
         width: 100%;
