@@ -448,7 +448,7 @@ Cards
 }
 
 .card-img-top{
-    width: 300px;
+    width: 200px;
     height: 250px;
     background-color: black;
     -webkit-transition: height 0.8s ease;
@@ -645,6 +645,14 @@ header{
   background-color: #f2f2f2;
 }
 
+.about{
+  margin: 20px;
+  font-size: 50px;
+}
+
+p {
+  font-size: 20px;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -668,6 +676,7 @@ header{
     .header-container {
         padding-top: 164px;
     }
+
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -677,5 +686,8 @@ header{
     }
     body {
         height: calc(100vh - 116px);
+    }
+    p {
+      font-size: 12px;
     }
 }
