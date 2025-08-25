@@ -62,15 +62,15 @@ var main = function () {
     console.log('isClicked= '+isClicked);
     });
   
-    $('.card').on('mouseenter', function() {
-      $(this).find('.card-text').slideDown(300);
-    });
+    // $('.card').on('mouseenter', function() {
+    //   $(this).find('.card-text').slideDown(300);
+    // });
   
-    $('.card').on('mouseleave', function(event) {
-       $(this).find('.card-text').css({
-         'display': 'none'
-       });
-     });
+    // $('.card').on('mouseleave', function(event) {
+    //    $(this).find('.card-text').css({
+    //      'display': 'none'
+    //    });
+    //  });
 };
 
 $(document).ready(main);
